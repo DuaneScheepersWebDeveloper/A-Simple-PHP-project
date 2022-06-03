@@ -1,11 +1,11 @@
 <?php
-// -----------------------GET TERMS-----------------------------------------
+
 function get_terms() {
     $json = get_data();
 
     return json_decode($json);
 }
-// -------------------GET TERM---------------------------------------------
+
 function get_term($term) {
     $terms = get_terms();
 
@@ -18,8 +18,6 @@ function get_term($term) {
     return false;
 }
 
-
-// -----------------SEARCH TERMS-----------------------------------------------------------
 function search_terms($search) {
     $items = get_terms();
 
@@ -34,7 +32,7 @@ function search_terms($search) {
     return $results;
 
 }
-// ----------------------GET DATA------------------------------------------------------
+
 function get_data() {
     $fname = CONFIG['data_file'];
 
@@ -49,7 +47,3 @@ function get_data() {
 
     return $json;
 }
-
-//Something to remember about the 2 methods
-//array_map(fn, arr)
-//array_filter(arr, fn)

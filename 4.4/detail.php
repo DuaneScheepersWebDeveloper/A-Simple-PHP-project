@@ -11,8 +11,6 @@ if($data == false){
   die();
 }
 
-
-
 $view_bag = [
   'title'=>'Details  for ' . $data->term
 ];
