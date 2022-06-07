@@ -1,11 +1,11 @@
 <?php
-//---------------------Get terms-------------------------------------------
+
 function get_terms() {
     $json = get_data();
 
     return json_decode($json);
 }
-//-----------------------Get term-----------------------------------------
+
 function get_term($term) {
     $terms = get_terms();
 
@@ -17,7 +17,7 @@ function get_term($term) {
 
     return false;
 }
-//--------------------------Search Terms--------------------------------------
+
 function search_terms($search) {
     $items = get_terms();
 
@@ -32,7 +32,20 @@ function search_terms($search) {
     return $results;
 
 }
-//----------------------Get Data------------------------------------------
+
+function add_term($term, $definition) {
+    $items = get_terms();
+
+    $obj = (object) [
+        'term' => $term,
+        'definition' => $definition
+    ];
+
+    $items[] = $obj;
+
+    set_data($items);
+}
+
 function get_data() {
     $fname = CONFIG['data_file'];
 
@@ -47,4 +60,11 @@ function get_data() {
 
     return $json;
 }
-//----------------------------------------------------------------
+
+function set_data($arr) {
+    $fname = CONFIG['data_file'];
+
+    $json = json_encode($arr);
+
+    file_put_contents($fname, $json);
+}
