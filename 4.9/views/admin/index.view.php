@@ -1,10 +1,11 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1 class="mt-5"><?= $view_bag['heading'] ?></h1>
+            <h1 class="mt-5"></h1>
         </div>
+        
     </div>
-    <div class="row">
+    <div class="row" style="margin-top:20px">
         <a href="create.php">Create New Term</a>
     </div>
     <div class="row">
