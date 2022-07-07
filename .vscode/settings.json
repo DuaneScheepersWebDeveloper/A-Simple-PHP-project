@@ -1,1 +1,13 @@
-{}
+{
+	"workbench.colorCustomizations": {
+		"sash.hoverBorder": "#65c89b",
+		"statusBarItem.hoverBackground": "#359268",
+		"statusBarItem.remoteBackground": "#42b883",
+		"statusBarItem.remoteForeground": "#343a40"
+	},
+	"peacock.color": "#42b883",
+	"peacock.affectActivityBar": false,
+	"peacock.affectSashHover": true,
+	"peacock.affectStatusBar": true,
+	"peacock.affectTitleBar": false
+}
